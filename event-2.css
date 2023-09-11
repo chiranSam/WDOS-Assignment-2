@@ -1,0 +1,460 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Navigation bar CSS*/
+
+.header{
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+.header a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    background-color: #ff0052;
+    height: 54px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.header a:hover{
+    background: white;
+    color: #ff0052;
+    letter-spacing: 3px;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+/*Logo image*/
+.header ul li img{
+    height: 54px;
+}
+
+.header .menu-btn{
+    width: 0px;
+}
+.header ul li span{
+    font-size: 0px;
+}
+
+
+/*in the mobile srenn add menu button to drop down nav bar*/
+@media(max-width:983px){
+    .header img{
+        padding: 5px;
+        width: 50px;
+    }
+    .header .menu-btn{
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        width: 45px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .main-ul {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        margin-top: -350px;
+        transition: 0.5s ease;
+        justify-content: center;
+    }
+
+    .mobile-menu{
+       margin-top:-26px;
+       border-bottom-left-radius: 10px ;
+       border-bottom-right-radius:10px;
+
+    }
+
+    .header ul li img{
+        width:0px;
+    }
+    .header ul li span{
+        font-size: 20px;
+        font-family: cursive;
+    }
+
+
+}
+
+
+
+/*Event page top CSS (animation)*/
+
+.event-2-main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(178deg, #0c0b0b,transparent),url(party-2.webp);
+}
+.event-2-main .event-2-ani{
+    width: 800px;
+    height: 200px;
+    box-shadow: 16px 14px 20px #0000008c ;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.event-2-main .event-2-ani::before{
+    content: "";
+    background-image: conic-gradient(
+        #ff0052 57deg,
+        transparent 135deg
+    );
+    width:170% ;
+    height:170%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+.event-2-main .event-2-ani::after{
+    content: "Let's Celebrate! ";
+    width: 790px;
+    height:190px ;
+    background: #101010;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    color: #ff0052;
+    font-size: 80px;
+    letter-spacing: 5px;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    align-items: center;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+/*make responsive animation and text*/
+@media(max-width:850px){
+    .event-2-main{
+        width:100%;
+        height: 100%;
+        box-shadow: 16px 14px 20px #0000008c ;
+
+    }  
+    .event-2-main .event-2-ani::after{
+
+    content: "Let's Celebrate! ";
+    width: 99%;
+    height:87%;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    padding-top: 20px;
+    font-size: 55px;
+    letter-spacing: 2px;
+
+    }
+  
+}
+
+/*about events*/
+.event-2-content
+{
+    background: linear-gradient(178deg, #0c0b0b,transparent),url(party-back.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.event-2-content .event-2-heading{
+    font-size: 45px;
+    text-align: center;
+    padding: 60px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.event-2-para{
+    color: white;
+    padding: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+
+.paty-types{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    padding: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+}
+
+.paty-types ul li {
+    color: #ffffff;
+
+}
+@media(max-width:850px){
+    .paty-types ul li{
+        font-size: 20px;
+
+    }
+    .event-2-para{
+        font-size: 20px;
+    }
+
+}
+   
+/*options heading CSS*/
+.options{
+    background: linear-gradient(306deg, #ff0052,white, #ff0052,transparent);
+}
+
+.options .options-heading{
+    width: 50%;
+    padding-bottom: 50px;
+    text-align: center;
+    display: contents;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+}
+
+
+.options .options-heading p{
+    font-size: 50px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding-bottom: 18px;
+
+}
+
+/*show images in row*/
+.options .options-gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/*show images in column*/
+.options .options-gallery .item-eve{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+/*img CSS*/
+.options .options-gallery .item-eve img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+/*make reponsive*/
+@media(max-width:769px){
+    .options .options-gallery{
+        flex-direction: column;
+    }
+    .options .options-gallery .item-eve{
+        width: 100%;
+    }
+}
+@media(max-width:643px){
+
+    .gallery-container .options-heading{
+        width: 100%;
+    
+    }
+    .options .options-heading p {
+        font-size: 30px;
+        padding-top: 12%;
+
+    }
+}
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+}
+
+.footer-distributed {
+    background-color:  rgba(24,34,75,255);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color:white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #3F71EA;
+}
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       

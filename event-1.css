@@ -1,0 +1,447 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    height: 54px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
+.header a{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: rgb(13, 79, 136);
+    background-color: lightyellow;
+    height: 54px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.header a:hover{
+    background: rgb(13, 79, 136);
+    color: lightyellow;
+    letter-spacing: 3px;
+}
+.header ul{
+    list-style: none;
+    display: flex;
+}
+.header ul li{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.header ul li img{
+    height: 54px;
+}
+
+.header .menu-btn{
+    width: 0px;
+}
+.header ul li span{
+    font-size: 0px;
+}
+
+
+/*in the mobile srenn add menu button to drop down nav bar*/
+@media(max-width:983px){
+    .header img{
+        padding: 5px;
+        width: 50px;
+    }
+    .header .menu-btn{
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        width: 45px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .main-ul {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        margin-top: -350px;
+        transition: 0.5s ease;
+        justify-content: center;
+    }
+
+    .mobile-menu{
+       margin-top:-26px;
+       border-bottom-left-radius: 10px ;
+       border-bottom-right-radius:10px;
+
+    }
+
+    .header ul li img{
+        width:0px;
+    }
+    .header ul li span{
+        font-size: 20px;
+        font-family: cursive;
+    }
+
+}
+
+
+
+/*event page main header CSS*/
+
+
+.event_1-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(178deg, #0c0b0b,transparent),url(wedding\ back.jpg);
+    padding-top: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.event_1-main .event-top h1{
+    position: relative;
+    font-size: 55px;
+    color: transparent;
+    -webkit-text-stroke: 0.1vw rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: sans-serif;
+}
+.event_1-main .event-top h2{
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.event_1-main .event-top h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0vw blue;
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: text-ani 7s linear infinite;
+}
+/*animation keyframe for text h1*/
+@keyframes text-ani{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+
+/*Responsiveness of main header*/
+
+@media(max-width:1230px){
+    .event_1-main .event-top h1::before{
+        font-size: 30px;
+        animation: none;
+        border-right:none;
+        -webkit-text-stroke: 0;
+    }
+    .event_1-main .event-top h1{
+        font-size: 33px;
+        color: white;
+        -webkit-text-stroke: 0;
+        letter-spacing: 1px;
+        padding-top: 20%;
+        text-align: center;
+    }
+    .event_1-main .event-top h2{
+        font-size: 20px;
+        color: #ffffff;
+    }
+   
+}
+
+/*2nd part of wedding page*/
+
+.wed-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 35px;
+    background: lightyellow;
+}
+.wed-content section p{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.wed-content section h3{
+    text-align: center;
+    font-size: 25px
+
+}
+.wed-content section h4{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-bottom: 25px;
+    text-align: center;
+    
+}
+/*wedding gallery*/
+.wed-gallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px ;
+    font-family: sans-serif;
+    background:  linear-gradient(306deg, #ffff37,white, #ffff37,transparent);
+
+}
+/*Gallery heading CSS*/
+.wed-gallery .wed-heading{
+    width: 50%;
+    padding-bottom: 50px;
+}
+
+
+.wed-gallery .wed-heading h2{
+    font-size: 50px;
+    border-bottom: 1px solid black
+
+}
+.wed-gallery .wed-heading h2 span{
+    font-weight: 100;
+
+}
+/*show images in row*/
+.wed-gallery .wed-gallery_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/*show images in column*/
+.wed-gallery .wed-gallery_box .wed-column{
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+/*img CSS*/
+.wed-gallery .wed-gallery_box .wed-column img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+}
+/*make reponsive*/
+@media(max-width:769px){
+    .wed-gallery .wed-gallery_box{
+        flex-direction: column;
+    }
+    .wed-gallery .wed-gallery_box .wed-column{
+        width: 100%;
+    }
+}
+@media(max-width:643px){
+
+    .gallery-container .wed-heading{
+        width: 100%;
+    
+    }
+    .wed-gallery .wed-heading h2 {
+        font-size: 30px;
+        padding-top: 12%;
+
+    }
+}
+* The footer is fixed to the bottom of the page */
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+
+}
+
+.footer-distributed {
+    background-color:  rgba(24,34,75,255);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.footer-distributed h3 span {
+    color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color:white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #e0ac1c;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #3F71EA;
+}
+
+.footer-links a:hover {
+    color: #3F71EA;
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}       
