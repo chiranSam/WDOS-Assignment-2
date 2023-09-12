@@ -160,13 +160,13 @@
     .event-2-main .event-2-ani::after{
 
     content: "Let's Celebrate! ";
-    width: 99%;
+    width: 100%;
     height:87%;
     position: absolute;
     border-radius: 10px;
     display: flex;
     padding-top: 20px;
-    font-size: 45px;
+    font-size: 40px;
     letter-spacing: 2px;
 
     }
