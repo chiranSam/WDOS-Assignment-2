@@ -1083,6 +1083,11 @@ footer {
 @media(max-width:850px){
     .header-4 h2{
         font-size: 40px;
+        padding:10px
+        
+    }
+    .welcome-note h2{
+        font-size: 30px;
     }
 }
 
